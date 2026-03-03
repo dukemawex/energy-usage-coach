@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "energy-usage-coach"
+version = "0.1.0"
+description = "Forecast energy usage and generate safe, evidence-backed recommendations"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+integrations = [
+  "tavily-python>=0.5.0",
+  "google-genai>=0.5.0",
+]
+dev = [
+  "pytest>=8.0.0",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
